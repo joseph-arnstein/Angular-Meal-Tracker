@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Calorie Tracker</h1>
+  <meal-list *ngFor="#meal of meals">
+    <h3 (click)="clickMeal(meal)"
+    [class.editBlue]="meal === selectedMeal">{{ meal.name }}</h3>
+    <ul [class.show]="meal === selectedMeal">
+      <li>{{ meal.description }}</li>
+      <li>{{ meal.calories }}</li>
+    </ul>
+  </meal-list>
+</div>
+<div class="container">
+  <edit-meal-details *ngIf="selectedMeal" [meal]="selectedMeal">
+  </edit-meal-details>
+</div>
+<div class="container">
+  <new-meal (onSubmitNewMeal)="addMeal($event)"></new-meal>
+</div>

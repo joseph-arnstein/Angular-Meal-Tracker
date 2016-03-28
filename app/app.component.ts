@@ -8,22 +8,7 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'my-app',
   directives: [NewMealComponent, EditMealDetailsComponent],
-  template: `
-    <div class="container">
-      <h1>Stand in text</h1>
-      <meal-list *ngFor="#meal of meals">
-        <h3 (click)="clickMeal(meal)"
-        [class.editBlue]="meal === selectedMeal">{{ meal.name }}</h3>
-        <ul [class.show]="meal === selectedMeal">
-          <li>{{ meal.description }}</li>
-          <li>{{ meal.calories }}</li>
-        </ul>
-      </meal-list>
-    </div>
-    <edit-meal-details *ngIf="selectedMeal" [meal]="selectedMeal">
-    </edit-meal-details>
-    <new-meal (onSubmitNewMeal)="addMeal($event)"></new-meal>
-  `
+  templateUrl: 'app/app.component.html'
 })
 
 export class AppComponent {
@@ -31,8 +16,6 @@ export class AppComponent {
   public selectedMeal: Meal;
   constructor () {
     this.meals = [
-      new Meal("hamburger", "it was delicious", 200),
-      new Meal("cheeseburger", "also delightful", 400)
     ];
   }
   clickMeal(meal: Meal){
