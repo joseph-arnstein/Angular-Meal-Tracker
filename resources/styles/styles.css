@@ -1,3 +1,15 @@
 h1 {
-  color: blue
+  color: green;
+}
+
+.editBlue {
+  color: blue;
+}
+
+ul {
+  display: none;
+}
+
+ul.show {
+  display: block;
 }

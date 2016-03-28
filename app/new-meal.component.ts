@@ -25,6 +25,8 @@ export class NewMealComponent {
     var newMeal = new Meal(userName.value, userDescription.value, parseInt(userCalorieCount.value));
     console.log(newMeal);
     this.onSubmitNewMeal.emit(newMeal);
+    userName.value = "";
     userDescription.value = "";
+    userCalorieCount.value = "";
   }
 }
