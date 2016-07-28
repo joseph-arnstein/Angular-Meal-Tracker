@@ -1,5 +1,5 @@
-# review-project-3-21-to-3-25
-Using angular to build a meal tracking app
+# Angular 2 Meal Tracker
+Excercise using angular to build a meal tracking app
 
 #### _Code Review Week 2 of Epicodus Javascript_
 
